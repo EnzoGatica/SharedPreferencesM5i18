@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTxtNum1"
+        android:layout_width="209dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Ingreso un numero Entero"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtnum1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Valor entero almacenado: %1$d"
+        app:layout_constraintStart_toStartOf="@+id/editTxtNum1"
+        app:layout_constraintTop_toBottomOf="@+id/editTxtNum1" />
+
+    <EditText
+        android:id="@+id/editTxtString"
+        android:layout_width="210dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Ingresa un Texto"
+        android:inputType="text"
+        app:layout_constraintStart_toStartOf="@+id/txtnum1"
+        app:layout_constraintTop_toBottomOf="@+id/txtnum1" />
+
+    <TextView
+        android:id="@+id/txtString1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Texto almacenado: %1$s"
+        app:layout_constraintStart_toStartOf="@+id/editTxtString"
+        app:layout_constraintTop_toBottomOf="@+id/editTxtString" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="196dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:text="Hello first fragment"
+        app:layout_constraintStart_toStartOf="@+id/txtString1"
+        app:layout_constraintTop_toBottomOf="@+id/txtString1" />
+
+    <EditText
+        android:id="@+id/editTxtNum2"
+        android:layout_width="209dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Ingresa un Numero Decimal"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/switch1"
+        app:layout_constraintTop_toBottomOf="@+id/switch1" />
+
+    <TextView
+        android:id="@+id/txtNum2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Valor decimal Almacenado: %1$d"
+        app:layout_constraintStart_toStartOf="@+id/editTxtNum2"
+        app:layout_constraintTop_toBottomOf="@+id/editTxtNum2" />
+
+    <Button
+        android:id="@+id/btnBorrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginBottom="92dp"
+        android:text="BORRAR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="84dp"
+        android:layout_marginBottom="92dp"
+        android:text="GUARDAR"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
