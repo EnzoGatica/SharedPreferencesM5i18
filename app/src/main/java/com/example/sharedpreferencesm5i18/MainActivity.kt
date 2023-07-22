@@ -28,19 +28,26 @@ class MainActivity : AppCompatActivity() {
             mostrarDatos()
         }
         binding.btnBorrar.setOnClickListener {
-            borrar()
+            borrarDatos()
         }
     }
 
-    private fun borrar() {
+    private fun borrarDatos() {
         binding.txtnum1.text = ""
         binding.txtString1.text = ""
         binding.txtNum2.text = ""
         binding.switch1.isChecked = false
+
+        binding.editTxtNum1.text.clear()
+        binding.editTxtNum2.text.clear()
+        binding.editTxtString.text.clear()
+        mSharedPreferences.edit().clear().apply()
+
+        Toast.makeText(this, "Datos borrados", Toast.LENGTH_SHORT).show()
     }
 
     private fun guardarDatos(texto: String, entero: Int, decimal : Float, boleano: Boolean){
-        mSharedPreferences.edit().putString("miTeXTO",texto).apply()
+        mSharedPreferences.edit().putString("miTexto",texto).apply()
         mSharedPreferences.edit().putInt("miEntero",entero).apply()
         mSharedPreferences.edit().putFloat("miDecimal",decimal).apply()
         mSharedPreferences.edit().putBoolean("miBooleano",boleano).apply()
